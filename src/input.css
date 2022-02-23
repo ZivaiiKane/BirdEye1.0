@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+main {
+  display: grid;
+  grid-template-areas: "left main right" ". main .";
+  grid-template-columns: 310px minmax(0, 1fr) 310px;
+  justify-content: center;
+  grid-gap: 40px;
+  padding: 40px 50px 80px;
+}
+
+.flights {
+  box-shadow: 0 0 28px rgba(82, 82, 82, 0.07);
+}
+
+.inner-nav {
+  width: calc(100% + 6px);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 0 28px rgba(59, 59, 59, 0.07);
+}

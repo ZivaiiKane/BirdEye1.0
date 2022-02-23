@@ -7,7 +7,44 @@
     <title>BirdsEye</title>
   </head>
   <body>
-    <h1 class="text-2xl font-bold">Hi Mum!</h1>
+    <nav
+      class="w-full h-14 bg-[#1f364d] flex flex-row justify-center text-white"
+    >
+      <lottie-player
+        src="https://assets3.lottiefiles.com/packages/lf20_9xcses0f/eye.json"
+        background="transparent"
+        speed="0.5"
+        style="width: 48px; height: 48px"
+        hover
+        autoplay
+      ></lottie-player>
+      <h1 class="font-semibold text-lg mt-[10px] ml-2">BirdsEye</h1>
+    </nav>
+
+    <div class="w-full h-[28rem] bg-gray-200" id="map"></div>
+
+    <main class="layout">
+      <div class="history"></div>
+      <div class="flights border-[3px] border-gray-300 h-screen rounded">
+        <div
+          class="inner-nav -ml-[3px] h-12 border-y-[3px] border-t-0 border-y-gray-300"
+        ></div>
+        <div class="flights">
+          <div
+            class="flight-card items-center flex flex-wrap pr-4 text-gray-400"
+          >
+            <div
+              class="flight-img -ml-[18px] self-center flex-grow-0 flex-shrink-0 basis-auto relative"
+            >
+              <a href="" class="flex items-center"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tracking"></div>
+    </main>
+
     <script type="module" src="/src/main.ts"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
 </html>
