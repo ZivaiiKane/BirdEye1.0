@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <title>BirdsEye</title>
   </head>
   <body>
@@ -25,18 +33,47 @@
 
     <main class="layout">
       <div class="history"></div>
-      <div class="flights border-[3px] border-gray-300 h-screen rounded">
+      <div class="flights border-[3px] border-gray-300 rounded">
         <div
           class="inner-nav -ml-[3px] h-12 border-y-[3px] border-t-0 border-y-gray-300"
         ></div>
-        <div class="flights">
+        <div class="flights pt-4" id="container">
           <div
-            class="flight-card items-center flex flex-wrap pr-4 text-gray-400"
+            class="flight-card items-center flex flex-wrap pr-4 text-gray-400] my-4"
           >
             <div
               class="flight-img -ml-[18px] self-center flex-grow-0 flex-shrink-0 basis-auto relative"
             >
-              <a href="" class="flex items-center"></a>
+              <a href="" class="flex items-center">
+                <picture
+                  class="h-8 w-8 border-[3px] border-gray-300 bg-gray-300 rounded-full relative"
+                >
+                  <img
+                    src="https://picsum.photos/seed/picsum/200/300"
+                    alt=""
+                    class="h-full object-cover w-full rounded-full"
+                  />
+                </picture>
+              </a>
+            </div>
+            <div
+              class="w-[44px] h-[44px] mr-[5px] ml-[4px] flex justify-center pt-[2px] items-center text-gray-500"
+            ></div>
+            <div class="flex flex-col">
+              <h1
+                class="text-lg py-[2px] text-gray-600 text-ellipsis whitespace-normal leading-[1.4em]"
+              >
+                Loading...
+              </h1>
+              <div
+                class="items-center text-gray-700 flex-wrap text-[15px] leading-[20px] mt-[1px]"
+              >
+                <div
+                  class="relative text-green-600 whitespace-nowrap font-medium"
+                >
+                  <span>Loading...</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

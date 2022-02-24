@@ -9,6 +9,7 @@ interface Flight {
   longitude: number;
   latitude: number;
   on_ground: boolean;
+  true_track: number;
 }
 
 let flightsArray: Flight[] = [];
@@ -22,7 +23,8 @@ let createObject = (data: any[]): Flight => {
     last_contact: data[4],
     longitude: data[5],
     latitude: data[6],
-    on_ground: data[7],
+    on_ground: data[8],
+    true_track: data[10],
   };
 
   return flight;
@@ -37,10 +39,14 @@ data$.subscribe((result) => {
     flightsArray = [];
     return;
   }
+
   flightsArray = result.states
     .slice(0, 100)
     .map((data: (number | string | boolean)[]) => createObject(data));
-  console.log([flightsArray]);
+
+  console.log(flightsArray);
+
+  localStorage.setItem("flights", JSON.stringify(flightsArray));
 });
 
 export { flightsArray, Flight };
